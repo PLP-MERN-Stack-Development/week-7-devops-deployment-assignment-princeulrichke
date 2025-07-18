@@ -29,7 +29,13 @@ export const useSocket = () => {
       reconnectionDelay: 2000, // Wait 2 seconds before reconnecting
       reconnectionDelayMax: 10000, // Max wait time of 10 seconds
       reconnectionAttempts: 5, // Only try 5 times
-      randomizationFactor: 0.3
+      randomizationFactor: 0.3,
+      // Production optimizations
+      upgrade: true,
+      rememberUpgrade: true,
+      autoConnect: true,
+      forceNew: false,
+      withCredentials: true
     });
 
     socketInstance.on('connect', () => {

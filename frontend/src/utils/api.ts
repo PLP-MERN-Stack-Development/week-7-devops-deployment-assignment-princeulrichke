@@ -7,10 +7,11 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 // Create axios instance
 const apiInstance = axios.create({
   baseURL: `${API_URL}/api`,
-  timeout: 10000,
+  timeout: 30000, // Increased timeout for production
   headers: {
     'Content-Type': 'application/json',
   },
+  withCredentials: true, // Enable credentials for CORS
 });
 
 // Request interceptor to add auth token
