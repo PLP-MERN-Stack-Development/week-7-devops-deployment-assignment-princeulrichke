@@ -295,3 +295,6 @@ config/development.json
 *.csr
 *.pfx
 *.p12
+
+# GitHub Workflows (requires special OAuth permissions)
+.github/workflows/
