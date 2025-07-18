@@ -70,7 +70,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Auth rate limiting - only applied to auth routes
-app.use('/api/auth', async (req, res, next) => {
+app.use('/api/auth', async (req: express.Request, res: express.Response, next: express.NextFunction) => {
   try {
     const key = req.ip || 'unknown';
     await authRateLimiter.consume(key);
@@ -81,7 +81,7 @@ app.use('/api/auth', async (req, res, next) => {
 });
 
 // Health check endpoint
-app.get('/health', (req, res) => {
+app.get('/health', (req: express.Request, res: express.Response) => {
   res.json({ 
     status: 'OK', 
     timestamp: new Date().toISOString(),
@@ -96,7 +96,7 @@ app.use('/api/groups', groupRoutes);
 app.use('/api/messages', messageRoutes);
 
 // 404 handler
-app.use('*', (req, res) => {
+app.use('*', (req: express.Request, res: express.Response) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
