@@ -4,6 +4,20 @@ A real-time chat application built with the MERN stack (MongoDB, Express.js, Rea
 
 ![Chat Application](https://img.shields.io/badge/MERN-Stack-green) ![TypeScript](https://img.shields.io/badge/TypeScript-blue) ![Socket.io](https://img.shields.io/badge/Socket.io-Real--Time-orange) ![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
 
+## 🌐 Live Demo
+
+**🚀 Application is live and running!**
+
+- **Frontend (Vercel)**: [https://week-7-devops-deployment-assignment-kappa.vercel.app](https://week-7-devops-deployment-assignment-kappa.vercel.app)
+- **Backend API (Render)**: [https://mern-chat-backend-54bf.onrender.com](https://mern-chat-backend-54bf.onrender.com)
+- **Health Check**: [https://mern-chat-backend-54bf.onrender.com/health](https://mern-chat-backend-54bf.onrender.com/health)
+
+### 🎯 Test the Application:
+1. Visit the live frontend URL
+2. Register a new account or login
+3. Create groups and start chatting
+4. Test real-time messaging with multiple browser tabs
+
 ## 🚀 Features
 
 ### Core Features
